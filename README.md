@@ -1,16 +1,25 @@
-# A01
-A01 - doing my first assignment
 # A01 — California Housing Boxplot
 
-This project loads the California Housing dataset, creates a boxplot to visualize the distribution of a selected variable, and saves the resulting figure as an image.
+This project demonstrates a basic GitHub and Python workflow by loading the California Housing dataset, creating a boxplot, and saving the resulting figure as an image.
 
 ## Data
 
-The project uses the **California Housing dataset** provided through `scikit-learn`.
+This project uses the **California Housing dataset**, which is provided through `scikit-learn`.
 
-The dataset contains information about California districts, including features such as median income, house age, average rooms, population, and median house value.
+The dataset is loaded using `fetch_california_housing(as_frame=True)` and contains information about California housing districts, including features such as:
 
-## Project Structure
+* Median income
+* House age
+* Average number of rooms
+* Average number of bedrooms
+* Population
+* Average occupancy
+* Latitude and longitude
+* Median house value
+
+The dataset is loaded directly from `scikit-learn` when the Python script is executed.
+
+## Repository Structure
 
 ```text
 A01/
@@ -22,39 +31,78 @@ A01/
     └── boxplot.png
 ```
 
+## Requirements
+
+The project uses Python and the following packages:
+
+```text
+pandas==2.1.4
+matplotlib>=3.8
+scikit-learn>=1.4
+```
+
+These dependencies are listed in `requirements.txt`.
+
 ## How to Run
 
-1. Clone the repository to your computer.
-2. Create and activate a Python environment.
-3. Install the required packages:
+### 1. Clone the Repository
+
+Clone the `A01` repository to your computer using GitHub Desktop or Git:
+
+```bash
+git clone <your-repository-url>
+```
+
+### 2. Open the A01 Folder
+
+Change your working directory to the A01 repository:
+
+```bash
+cd path/to/A01
+```
+
+### 3. Install the Required Packages
+
+Run:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Run the plotting script:
+### 4. Run the Python Script
+
+Run the boxplot script using:
 
 ```bash
 python src/boxplot.py
 ```
 
-More detailed instructions will be added later.
+The script will download/load the California Housing dataset, create a boxplot, and save the resulting figure in the `figs` folder.
 
 ## Expected Output
 
-Running the script will create a boxplot and save it as:
+After successfully running the script, the following image file should be created:
 
 ```text
 figs/boxplot.png
 ```
 
-The saved image will show the distribution of the selected California Housing dataset variable(s).
+The image contains a boxplot based on a variable from the California Housing dataset.
 
-## Requirements
+## Git Workflow
 
-The project requires:
+This assignment uses a simple Git branching workflow.
 
-* Python
-* pandas
-* matplotlib
-* scikit-learn
+* `main` — final version of the project
+* `dev` — working branch used to make changes
+* Changes are committed to `dev`
+* A Pull Request is created from `dev` to `main`
+* After the Pull Request is merged, the `dev` branch is deleted
+
+## Author
+
+**Parvathi Meghanath**
+
+University of Connecticut
+MS in Business Analytics & Project Management
+OPIM 5512
