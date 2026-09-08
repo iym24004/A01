@@ -1,108 +1,116 @@
 # A01 — California Housing Boxplot
 
-This project demonstrates a basic GitHub and Python workflow by loading the California Housing dataset, creating a boxplot, and saving the resulting figure as an image.
+## Project Overview
 
-## Data
+This project demonstrates a basic GitHub and Python data analysis workflow. It loads the California Housing dataset from `scikit-learn`, analyzes key features, generates a boxplot of median house values, and saves the resulting figure to a local directory.
 
-This project uses the **California Housing dataset**, which is provided through `scikit-learn`.
+## Data Overview
 
-The dataset is loaded using `fetch_california_housing(as_frame=True)` and contains information about California housing districts, including features such as:
+This project uses the **California Housing dataset**, which is loaded using:
 
-* Median income
-* House age
-* Average number of rooms
-* Average number of bedrooms
-* Population
-* Average occupancy
-* Latitude and longitude
-* Median house value
+`sklearn.datasets.fetch_california_housing(as_frame=True)`
 
-The dataset is loaded directly from `scikit-learn` when the Python script is executed.
+The dataset contains aggregate statistics for California census tracts.
+
+### Features
+
+* **MedInc**: Median income in block group
+* **HouseAge**: Median house age in block group
+* **AveRooms**: Average number of rooms per household
+* **AveBedrms**: Average number of bedrooms per household
+* **Population**: Block group population
+* **AveOccup**: Average number of household members
+* **Latitude**: Block group latitude
+* **Longitude**: Block group longitude
+* **MedHouseVal**: Median house value for California districts, expressed in $100,000s
 
 ## Repository Structure
 
 ```text
 A01/
-├── README.md
-├── requirements.txt
+├── figs/
+│   └── boxplot.png
 ├── src/
 │   └── boxplot.py
-└── figs/
-    └── boxplot.png
+├── .gitignore
+├── README.md
+└── requirements.txt
 ```
 
 ## Requirements
 
-The project uses Python and the following packages:
+This project requires **Python 3** and the following dependencies:
 
-```text
-pandas==2.1.4
-matplotlib>=3.8
-scikit-learn>=1.4
-```
+* pandas
+* matplotlib
+* scikit-learn
 
-These dependencies are listed in `requirements.txt`.
+All required libraries are listed in `requirements.txt`.
 
 ## How to Run
 
 ### 1. Clone the Repository
 
-Clone the `A01` repository to your computer using GitHub Desktop or Git:
+Clone this repository to your local machine using GitHub Desktop or the command line:
 
 ```bash
 git clone <your-repository-url>
 ```
 
-### 2. Open the A01 Folder
+### 2. Navigate to the Project Directory
 
-Change your working directory to the A01 repository:
+Open a terminal or command prompt and navigate to the project root directory:
 
 ```bash
-cd path/to/A01
+cd A01
 ```
 
-### 3. Install the Required Packages
+### 3. Install Dependencies
 
-Run:
+Install the required Python packages using:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run the Python Script
+### 4. Execute the Script
 
-Run the boxplot script using:
+Run the Python script:
 
 ```bash
 python src/boxplot.py
 ```
 
-The script will download/load the California Housing dataset, create a boxplot, and save the resulting figure in the `figs` folder.
-
 ## Expected Output
 
-After successfully running the script, the following image file should be created:
+When the script executes successfully:
+
+* Summary information from the dataset is printed to the terminal.
+* The dataset's `head()` and `shape` information are displayed.
+* A boxplot of median house values is generated.
+* The resulting image is saved in the `figs/` directory.
+
+The generated figure can be found at:
 
 ```text
 figs/boxplot.png
 ```
 
-The image contains a boxplot based on a variable from the California Housing dataset.
-
 ## Git Workflow
 
-This assignment uses a simple Git branching workflow.
+This project follows a standard feature-branch Git workflow:
 
-* `main` — final version of the project
-* `dev` — working branch used to make changes
-* Changes are committed to `dev`
-* A Pull Request is created from `dev` to `main`
-* After the Pull Request is merged, the `dev` branch is deleted
+1. Development work is completed on the dedicated `dev` branch.
+2. Code updates and generated output files are committed and pushed to `dev`.
+3. A Pull Request is opened to review and merge changes from `dev` into `main`.
+4. The `dev` branch is deleted after the merge to maintain repository hygiene.
 
 ## Author
 
 **Parvathi Meghanath**
 
 University of Connecticut
+
 MS in Business Analytics & Project Management
+
 OPIM 5512
