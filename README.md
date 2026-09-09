@@ -54,7 +54,7 @@ All required libraries are listed in `requirements.txt`.
 Clone this repository to your local machine using GitHub Desktop or the command line:
 
 ```bash
-git clone <https://github.com/iym24004/A01>
+git clone https://github.com/iym24004/A01.git
 ```
 
 ### 2. Navigate to the Project Directory
